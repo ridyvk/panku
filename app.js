@@ -2,8 +2,14 @@ const svgSkull=`<svg viewBox='0 0 320 420'><rect width='320' height='420' fill='
 const svgGlitch=`<svg viewBox='0 0 440 360'><rect width='440' height='360' fill='#020402'/><g opacity='.28' fill='#76ff72'><rect x='34' y='38' width='180' height='10'/><rect x='250' y='76' width='104' height='8'/><rect x='42' y='306' width='220' height='12'/></g><g transform='translate(80 28)' fill='#76ff72'><path d='M140 14c-72 0-112 46-112 112 0 48 24 76 52 91v58h120v-58c30-15 54-43 54-91C254 60 212 14 140 14z'/><rect x='46' y='84' width='72' height='48' fill='#020402'/><rect x='162' y='84' width='72' height='48' fill='#020402'/><path d='M140 142l-26 54h52z' fill='#020402'/></g><g fill='#020402' opacity='.9'><rect x='94' y='116' width='96' height='12'/><rect x='258' y='150' width='118' height='14'/><rect x='122' y='245' width='190' height='11'/></g></svg>`;
 const svgPoster=`<svg viewBox='0 0 320 520'><rect width='320' height='520' fill='#020402'/><g fill='none' stroke='#76ff72' stroke-width='5' opacity='.55'><path d='M38 70h244v380H38z'/><path d='M58 92h204v336H58z'/></g><text x='160' y='62' text-anchor='middle' font-size='24' fill='#76ff72' font-family='monospace'>DIVE</text><g fill='#76ff72'><path d='M160 118c-58 0-92 38-92 92 0 38 18 62 42 75v51h100v-51c24-13 42-37 42-75 0-54-34-92-92-92z'/></g><g fill='#020402'><circle cx='126' cy='205' r='30'/><circle cx='194' cy='205' r='30'/><path d='M160 230l-22 48h44z'/></g><text x='160' y='424' text-anchor='middle' font-size='18' fill='#76ff72' font-family='monospace'>LISTED VOID</text></svg>`;
 const svgBand=`<svg viewBox='0 0 360 500'><rect width='360' height='500' fill='#020402'/><g fill='none' stroke='#76ff72' stroke-width='8' stroke-linecap='round'><path d='M180 124v190'/><path d='M138 188L52 286'/><path d='M222 188l86 98'/></g><g fill='#76ff72'><ellipse cx='180' cy='102' rx='54' ry='62'/><path d='M116 180h128l34 170H82z'/></g><g stroke='#020402' stroke-width='11' opacity='.9'><path d='M130 76l102 32'/><path d='M120 104l116 34'/><path d='M138 132l86 28'/></g><path d='M148 140c20 20 44 20 64 0' stroke='#020402' stroke-width='8' fill='none' stroke-linecap='round'/></svg>`;
-const art=[['a',svgSkull],['b',svgGlitch],['c',svgPoster],['d',svgBand],['e',svgGlitch]];
-document.getElementById('orbit').innerHTML=art.map(x=>`<div class='card ${x[0]}'>${x[1]}</div>`).join('');
+const orbitHtml=[
+  `<div class='card a'>${svgSkull}</div>`,
+  `<div class='card b'>${svgGlitch}</div>`,
+  `<div class='card c real-skull'><img src='assets/art/skull-dot-green.svg' alt='green dot skull art'></div>`,
+  `<div class='card d'>${svgBand}</div>`,
+  `<div class='card e'>${svgPoster}</div>`
+].join('');
+document.getElementById('orbit').innerHTML=orbitHtml;
 const delay=1450;
 const state={busy:false,seen:new Set(JSON.parse(localStorage.getItem('panku.seen')||'[]')),last:localStorage.getItem('panku.last')||''};
 const stage=document.getElementById('stage'),go=document.getElementById('go'),preview=document.getElementById('preview'),statusLabel=document.getElementById('status'),target=document.getElementById('target'),count=document.getElementById('count'),lastTarget=document.getElementById('last');
