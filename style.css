@@ -20,12 +20,13 @@ h1{margin:4px 0 0;font-size:25px;letter-spacing:.16em;text-shadow:0 0 18px rgba(
 .count{font-size:12px;color:var(--g);border:1px solid rgba(115,255,114,.28);height:31px;padding:8px 10px;background:rgba(0,0,0,.34)}
 .orbit{position:absolute;inset:0;z-index:1;pointer-events:none}
 .card{position:absolute;width:120px;aspect-ratio:1/1.2;opacity:.58;filter:drop-shadow(0 0 16px rgba(115,255,114,.26));mix-blend-mode:screen}
-.card svg{width:100%;height:100%;display:block}
+.card svg,.card img{width:100%;height:100%;display:block;object-fit:contain}
 .a{left:18px;top:112px;animation:floatA 5s ease-in-out infinite}
 .b{right:-8px;top:146px;width:142px;animation:glitch 3.4s steps(2) infinite}
-.c{left:-10px;bottom:150px;width:138px;animation:floatB 6s ease-in-out infinite}
+.c{left:-4px;bottom:116px;width:178px;opacity:.82;animation:floatB 6.6s ease-in-out infinite}
 .d{right:14px;bottom:128px;width:128px;animation:floatC 4.8s ease-in-out infinite}
 .e{left:50%;top:73px;width:176px;transform:translateX(-50%);opacity:.24}
+.real-skull img{filter:drop-shadow(0 0 18px rgba(115,255,114,.24)) saturate(1.05)}
 .console{position:absolute;z-index:5;inset:0;display:grid;place-items:center;text-align:center;padding:26px}
 .status{font-size:12px;letter-spacing:.22em;color:var(--g);margin:0 0 14px;text-shadow:0 0 14px rgba(115,255,114,.72)}
 .go{position:relative;width:196px;aspect-ratio:1;border-radius:50%;border:1px solid rgba(115,255,114,.55);background:radial-gradient(circle at 50% 38%,rgba(115,255,114,.22),rgba(0,0,0,.88) 62%);color:var(--g);font-size:50px;font-weight:900;letter-spacing:.08em;box-shadow:0 0 42px rgba(115,255,114,.22),inset 0 0 35px rgba(115,255,114,.14);cursor:pointer;-webkit-tap-highlight-color:transparent}
@@ -50,4 +51,4 @@ h1{margin:4px 0 0;font-size:25px;letter-spacing:.16em;text-shadow:0 0 18px rgba(
 @keyframes suck{to{left:50%;top:50%;right:auto;bottom:auto;opacity:0;transform:translate(-50%,-50%) rotate(28deg) scale(.08);filter:brightness(2)}}
 @keyframes txt{50%{transform:translate(3px,-1px);opacity:.6}}
 @keyframes noise{50%{transform:translate(2px,-1px)}}
-@media(max-height:680px){.stage{min-height:560px}.go{width:168px}.card{width:102px}.bottom{bottom:13px}}
+@media(max-height:680px){.stage{min-height:560px}.go{width:168px}.card{width:102px}.c{width:150px}.bottom{bottom:13px}}
