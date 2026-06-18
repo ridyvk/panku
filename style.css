@@ -27,28 +27,21 @@ h1{margin:4px 0 0;font-size:25px;letter-spacing:.16em;text-shadow:0 0 18px rgba(
 .d{right:14px;bottom:128px;width:128px;animation:floatC 4.8s ease-in-out infinite}
 .e{left:50%;top:73px;width:176px;transform:translateX(-50%);opacity:.24}
 .real-skull img{filter:drop-shadow(0 0 18px rgba(115,255,114,.24)) saturate(1.05)}
+.pop-layer{position:absolute;inset:0;z-index:3;pointer-events:none;overflow:hidden}
+.pop-item{position:absolute;aspect-ratio:1/1;mix-blend-mode:screen;filter:drop-shadow(0 0 10px rgba(115,255,114,.18));animation:popupFloat 5.6s ease-out forwards}
+.pop-item svg{width:100%;height:100%;display:block}.pop-grid{aspect-ratio:1/1;opacity:.6}.pop-x{aspect-ratio:1/1;opacity:.78}.pop-bars{aspect-ratio:1/1;opacity:.64}.pop-skull{aspect-ratio:4/5;opacity:.72}
 .console{position:absolute;z-index:5;inset:0;display:grid;place-items:center;text-align:center;padding:26px}
 .status{font-size:12px;letter-spacing:.22em;color:var(--g);margin:0 0 14px;text-shadow:0 0 14px rgba(115,255,114,.72)}
 .go{position:relative;width:196px;aspect-ratio:1;border-radius:50%;border:1px solid rgba(115,255,114,.55);background:radial-gradient(circle at 50% 38%,rgba(115,255,114,.22),rgba(0,0,0,.88) 62%);color:var(--g);font-size:50px;font-weight:900;letter-spacing:.08em;box-shadow:0 0 42px rgba(115,255,114,.22),inset 0 0 35px rgba(115,255,114,.14);cursor:pointer;-webkit-tap-highlight-color:transparent}
 .go:before,.go:after{content:'';position:absolute;inset:14px;border-radius:50%;border:1px dashed rgba(115,255,114,.36);animation:spin 14s linear infinite}
 .go:after{inset:28px;animation-direction:reverse;opacity:.55}
 .target{min-height:44px;margin:18px 0 0;font-size:13px;line-height:1.7;color:var(--m)}
-.target strong{color:var(--w);font-size:15px}
-.hint{margin:14px auto 0;max-width:270px;font-size:11px;line-height:1.7;color:rgba(229,255,231,.48)}
+.target strong{color:var(--w);font-size:15px}.hint{margin:14px auto 0;max-width:270px;font-size:11px;line-height:1.7;color:rgba(229,255,231,.48)}
 .bottom{position:absolute;z-index:6;left:18px;right:18px;bottom:18px;display:flex;align-items:end;justify-content:space-between;gap:10px;font-size:11px;color:var(--m)}
-.last{color:var(--g);font-size:12px;margin-top:4px}
-.preview{border:1px solid rgba(115,255,114,.3);background:rgba(0,0,0,.42);color:var(--g);padding:10px 12px}
+.last{color:var(--g);font-size:12px;margin-top:4px}.preview{border:1px solid rgba(115,255,114,.3);background:rgba(0,0,0,.42);color:var(--g);padding:10px 12px}
 .stage.is-diving .go{animation:pulse .18s steps(2) infinite,blast 1.35s cubic-bezier(.2,.8,.2,1) forwards}
-.stage.is-diving .card{animation:suck 1.35s cubic-bezier(.2,.8,.2,1) forwards}
-.stage.is-diving .status{animation:txt .11s steps(2) infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes floatA{50%{translate:9px -15px;rotate:2deg}}
-@keyframes floatB{50%{translate:-9px 14px;rotate:-3deg}}
-@keyframes floatC{50%{translate:10px 8px;rotate:4deg}}
-@keyframes glitch{44%{translate:7px -2px;opacity:.26}47%{translate:-5px 3px;opacity:.72}}
-@keyframes pulse{50%{filter:brightness(1.75)}}
-@keyframes blast{to{transform:scale(1.18);box-shadow:0 0 120px rgba(115,255,114,.5),inset 0 0 80px rgba(115,255,114,.25)}}
-@keyframes suck{to{left:50%;top:50%;right:auto;bottom:auto;opacity:0;transform:translate(-50%,-50%) rotate(28deg) scale(.08);filter:brightness(2)}}
-@keyframes txt{50%{transform:translate(3px,-1px);opacity:.6}}
-@keyframes noise{50%{transform:translate(2px,-1px)}}
+.stage.is-diving .card,.stage.is-diving .pop-item{animation:suck 1.35s cubic-bezier(.2,.8,.2,1) forwards}.stage.is-diving .status{animation:txt .11s steps(2) infinite}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes floatA{50%{translate:9px -15px;rotate:2deg}}@keyframes floatB{50%{translate:-9px 14px;rotate:-3deg}}@keyframes floatC{50%{translate:10px 8px;rotate:4deg}}@keyframes glitch{44%{translate:7px -2px;opacity:.26}47%{translate:-5px 3px;opacity:.72}}
+@keyframes popupFloat{0%{transform:scale(.2) rotate(var(--rot,0deg));opacity:0}14%{transform:scale(1.08) rotate(var(--rot,0deg));opacity:.92}22%{transform:scale(.94) rotate(var(--rot,0deg));opacity:.72}50%{opacity:.78}100%{transform:translateY(-10px) scale(1) rotate(var(--rot,0deg));opacity:0}}
+@keyframes pulse{50%{filter:brightness(1.75)}}@keyframes blast{to{transform:scale(1.18);box-shadow:0 0 120px rgba(115,255,114,.5),inset 0 0 80px rgba(115,255,114,.25)}}@keyframes suck{to{left:50%;top:50%;right:auto;bottom:auto;opacity:0;transform:translate(-50%,-50%) rotate(28deg) scale(.08);filter:brightness(2)}}@keyframes txt{50%{transform:translate(3px,-1px);opacity:.6}}@keyframes noise{50%{transform:translate(2px,-1px)}}
 @media(max-height:680px){.stage{min-height:560px}.go{width:168px}.card{width:102px}.c{width:150px}.bottom{bottom:13px}}
