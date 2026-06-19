@@ -10,10 +10,19 @@
 <link rel='icon' href='assets/icons/icon.svg' type='image/svg+xml'>
 <link rel='stylesheet' href='style.css'>
 <style>
-.bg-art{inset:auto!important;left:-74px!important;top:84px!important;width:365px!important;height:146px!important;border:1px solid rgba(122,78,180,.18);border-radius:8px;opacity:.68!important;background-size:cover!important;background-position:center center!important;filter:contrast(1.12) saturate(1.08) drop-shadow(0 0 22px rgba(90,35,155,.24))!important;transform:rotate(-4deg) scale(1)!important;mix-blend-mode:screen}
+.bg-art{inset:auto!important;left:-74px!important;top:84px!important;width:365px!important;height:146px!important;border:1px solid rgba(122,78,180,.18);border-radius:8px;opacity:.58!important;background-size:cover!important;background-position:center center!important;filter:contrast(1.12) saturate(1.08) drop-shadow(0 0 22px rgba(90,35,155,.24))!important;transform:rotate(-4deg) scale(1)!important;mix-blend-mode:screen}
 .bg-art:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.18),rgba(0,0,0,.04),rgba(0,0,0,.35));pointer-events:none}
-.stage.is-diving .bg-art{filter:contrast(1.28) brightness(1.18) saturate(1.18) drop-shadow(0 0 26px rgba(115,255,114,.2))!important;transform:rotate(-4deg) scale(.92)!important;opacity:.2!important;transition:.35s}
-@media(max-height:680px){.bg-art{top:70px!important;width:315px!important;height:126px!important}}
+.bg-clutter{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.bg-piece{position:absolute;display:block;filter:drop-shadow(0 0 16px rgba(0,0,0,.34));transform-origin:center;opacity:.52;mix-blend-mode:normal}
+.bg-piece svg{width:100%;height:100%;display:block;overflow:visible}
+.bg-hand-1{left:-32px;bottom:88px;width:132px;height:182px;opacity:.62;transform:rotate(-12deg)}
+.bg-mouth-1{right:-22px;top:140px;width:122px;height:178px;opacity:.50;transform:rotate(8deg)}
+.bg-green-1{right:20px;bottom:92px;width:112px;height:112px;opacity:.38;transform:rotate(7deg)}
+.bg-hand-2{left:58px;top:246px;width:72px;height:100px;opacity:.34;transform:rotate(18deg)}
+.bg-mouth-2{left:226px;top:94px;width:58px;height:86px;opacity:.25;transform:rotate(-8deg)}
+.stage.is-diving .bg-art{filter:contrast(1.28) brightness(1.18) saturate(1.18) drop-shadow(0 0 26px rgba(115,255,114,.2))!important;transform:rotate(-4deg) scale(.92)!important;opacity:.18!important;transition:.35s}
+.stage.is-diving .bg-piece{opacity:.1;transform:scale(.9);transition:.35s}
+@media(max-height:680px){.bg-art{top:70px!important;width:315px!important;height:126px!important}.bg-hand-1{width:112px;height:154px;bottom:78px}.bg-mouth-1{width:104px;height:152px;top:126px}.bg-green-1{width:94px;height:94px;bottom:78px}.bg-hand-2{width:62px;height:86px;top:222px}.bg-mouth-2{width:50px;height:74px;top:82px}}
 </style>
 </head>
 <body>
@@ -22,6 +31,13 @@
   <div class='scan' aria-hidden='true'></div>
   <section class='stage' id='stage'>
     <div class='bg-art' aria-hidden='true'></div>
+    <div class='bg-clutter' aria-hidden='true'>
+      <div class='bg-piece bg-hand-1'><svg viewBox='0 0 120 160'><rect width='120' height='160' rx='4' fill='#df0064'/><path d='M22 128l12-24 62 12-7 30-39 4z' fill='#f3ead8' stroke='#060606' stroke-width='8' stroke-linejoin='round'/><path d='M40 116V40c0-14 18-14 18 0v66M59 113V51c0-13 18-13 18 0v59M78 110V20c0-14 20-13 19 1l-9 91M39 70l-25-25' stroke='#f3ead8' stroke-width='18' stroke-linecap='round'/><path d='M40 116V40c0-14 18-14 18 0v66M59 113V51c0-13 18-13 18 0v59M78 110V20c0-14 20-13 19 1l-9 91M39 70l-25-25' fill='none' stroke='#050505' stroke-width='8' stroke-linecap='round'/><path d='M16 42c12-13 27-15 40-3M12 42l30-22M12 42l31 6' fill='none' stroke='#050505' stroke-width='6' stroke-linecap='round'/></svg></div>
+      <div class='bg-piece bg-mouth-1'><svg viewBox='0 0 120 170'><rect width='120' height='170' fill='#f0e8d8'/><path d='M23 34c18-22 54-22 74 0 17 18 16 83-1 105-20 25-54 25-74 0-18-22-17-87 1-105z' fill='none' stroke='#e33a8a' stroke-width='11'/><path d='M27 54c19-25 49-26 67 0v61c-17 25-50 26-67 0z' fill='#020202'/><path d='M31 55c16 8 43 8 59 0M32 118c18 12 42 12 58 0' stroke='#f0e8d8' stroke-width='9' stroke-linecap='round'/><path d='M84 94h20M94 84v20' stroke='#d92d82' stroke-width='7' stroke-linecap='round'/><path d='M26 142v20M54 148v16M84 140v22' stroke='#020202' stroke-width='4' stroke-linecap='round'/></svg></div>
+      <div class='bg-piece bg-green-1'><svg viewBox='0 0 150 150'><rect width='150' height='150' fill='#020202'/><g fill='none' stroke='#8bd31d' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'><circle cx='28' cy='28' r='18'/><path d='M18 29c8 10 20 10 28 0M64 10l8 20 21 2-16 13 5 20-18-11-18 11 5-20-16-13 21-2zM110 12c13 0 22 10 22 22 0 18-22 29-22 29S88 52 88 34c0-12 9-22 22-22zM22 81c12-16 34-11 36 9 2 22-22 31-36 17M80 76c-17 0-28 10-28 26 0 13 10 22 28 22s28-9 28-22c0-16-11-26-28-26zM63 98l12 12M75 98l-12 12M85 98l12 12M97 98l-12 12M18 130l26-22 22 20M111 106l26 24M137 106l-26 24'/></g></svg></div>
+      <div class='bg-piece bg-hand-2'><svg viewBox='0 0 120 160'><rect width='120' height='160' rx='4' fill='#df0064'/><path d='M22 128l12-24 62 12-7 30-39 4z' fill='#f3ead8' stroke='#060606' stroke-width='8' stroke-linejoin='round'/><path d='M40 116V40c0-14 18-14 18 0v66M59 113V51c0-13 18-13 18 0v59M78 110V20c0-14 20-13 19 1l-9 91M39 70l-25-25' fill='none' stroke='#050505' stroke-width='8' stroke-linecap='round'/></svg></div>
+      <div class='bg-piece bg-mouth-2'><svg viewBox='0 0 120 170'><rect width='120' height='170' fill='#f0e8d8'/><path d='M23 34c18-22 54-22 74 0 17 18 16 83-1 105-20 25-54 25-74 0-18-22-17-87 1-105z' fill='none' stroke='#e33a8a' stroke-width='11'/><path d='M27 54c19-25 49-26 67 0v61c-17 25-50 26-67 0z' fill='#020202'/><path d='M31 55c16 8 43 8 59 0M32 118c18 12 42 12 58 0' stroke='#f0e8d8' stroke-width='9' stroke-linecap='round'/></svg></div>
+    </div>
     <div class='top'>
       <div><p class='eyebrow'>JP LISTED RANDOMIZER</p><h1>CORP DIVE</h1></div>
       <div class='count' id='count'>0 / 100</div>
