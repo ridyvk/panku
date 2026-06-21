@@ -1,1 +1,19 @@
-{"name":"CORP DIVE","short_name":"CORP DIVE","description":"上場企業100社からランダムに1社の公式HPへ飛ぶPWA","start_url":"./index.html","scope":"./","display":"standalone","background_color":"#020402","theme_color":"#030503","orientation":"portrait","icons":[{"src":"assets/icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
+{
+  "name": "CORP DIVE",
+  "short_name": "CORP DIVE",
+  "description": "上場企業100社からランダムに1社の公式サイトへ移動するPWA",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f5f7",
+  "theme_color": "#f6f7f9",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
