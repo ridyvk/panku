@@ -59,7 +59,6 @@ function visitCompany() {
   saveCompany(company);
   showCompany(company);
   statusLabel.textContent = "OPENING";
-  go.textContent = "公式サイトを開いています";
   go.setAttribute("aria-busy", "true");
   stage.classList.add("is-diving");
 
