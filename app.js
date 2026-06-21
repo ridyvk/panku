@@ -1,82 +1,52 @@
-const delay = 500;
-
-function readSeen() {
-  try {
-    const value = JSON.parse(localStorage.getItem("panku.seen") || "[]");
-    return new Set(Array.isArray(value) ? value : []);
-  } catch {
-    return new Set();
-  }
-}
-
-const state = {
-  busy: false,
-  seen: readSeen(),
-  last: localStorage.getItem("panku.last") || ""
-};
-
 const stage = document.getElementById("stage");
 const go = document.getElementById("go");
-const preview = document.getElementById("preview");
-const statusLabel = document.getElementById("status");
-const targetName = document.getElementById("target-name");
-const targetSector = document.getElementById("target-sector");
-const count = document.getElementById("count");
-const lastTarget = document.getElementById("last");
-
-function updateStats() {
-  count.textContent = `${state.seen.size} / ${companies.length}`;
-  const company = companies.find((item) => item.code === state.last);
-  lastTarget.textContent = company ? `${company.code} ${company.name}` : "なし";
-}
+let busy = false;
 
 function chooseCompany() {
+  const last = localStorage.getItem("panku.last") || "";
   const candidates = companies.length > 1
-    ? companies.filter((item) => item.code !== state.last)
+    ? companies.filter((company) => company.code !== last)
     : companies;
 
   return candidates[Math.floor(Math.random() * candidates.length)];
 }
 
 function saveCompany(company) {
-  state.seen.add(company.code);
-  state.last = company.code;
-  localStorage.setItem("panku.seen", JSON.stringify([...state.seen]));
   localStorage.setItem("panku.last", company.code);
-  updateStats();
+
+  try {
+    const saved = JSON.parse(localStorage.getItem("panku.seen") || "[]");
+    const seen = new Set(Array.isArray(saved) ? saved : []);
+    seen.add(company.code);
+    localStorage.setItem("panku.seen", JSON.stringify([...seen]));
+  } catch {
+    localStorage.setItem("panku.seen", JSON.stringify([company.code]));
+  }
 }
 
-function showCompany(company) {
-  targetName.textContent = `${company.code} ${company.name}`;
-  targetSector.textContent = company.sector;
-}
+function launch() {
+  if (busy || !companies.length) return;
 
-function visitCompany() {
-  if (state.busy) return;
-
-  state.busy = true;
+  busy = true;
   const company = chooseCompany();
   saveCompany(company);
-  showCompany(company);
-  statusLabel.textContent = "OPENING";
   go.setAttribute("aria-busy", "true");
   stage.classList.add("is-diving");
 
-  window.setTimeout(() => window.location.assign(company.url), delay);
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  window.setTimeout(
+    () => window.location.assign(company.url),
+    reduceMotion ? 350 : 1150
+  );
 }
 
-function previewCompany() {
-  if (state.busy) return;
+go.addEventListener("click", launch);
 
-  const company = chooseCompany();
-  saveCompany(company);
-  showCompany(company);
-  statusLabel.textContent = "SELECTED";
-}
-
-go.addEventListener("click", visitCompany);
-preview.addEventListener("click", previewCompany);
-updateStats();
+window.addEventListener("pageshow", () => {
+  busy = false;
+  go.removeAttribute("aria-busy");
+  stage.classList.remove("is-diving");
+});
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("sw.js").catch(() => {});
