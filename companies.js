@@ -1388,7 +1388,6 @@ const companies=`
 7305|新家工業|鉄鋼|https://www.araya-kk.co.jp/
 7320|日本リビング保証|その他金融業|https://jlw.jp/
 7337|ひろぎんホールディングス|銀行業|https://www.hirogin-hd.co.jp/
-7338|インヴァスト|証券・商品先物取引業|https://www.inv.inc/
 7347|マーキュリアホールディングス|証券・商品先物取引業|https://www.mercuria.jp/
 7350|おきなわフィナンシャルグループ|銀行業|https://www.okinawa-fg.co.jp/
 7380|十六フィナンシャルグループ|銀行業|https://www.16fg.co.jp/
@@ -1438,7 +1437,6 @@ const companies=`
 9052|山陽電気鉄道|陸運業|https://www.sanyo-railway.co.jp/
 9066|日新|倉庫・運輸関連業|https://www.nissin-tw.com/
 9068|丸全昭和運輸|陸運業|https://www.maruzenshowa.co.jp/
-9070|トナミホールディングス|陸運業|https://www.tonamiholdings.co.jp/
 9072|ニッコンホールディングス|陸運業|https://www.nikkon-hd.co.jp/
 9075|福山通運|陸運業|https://corp.fukutsu.co.jp/
 9081|神奈川中央交通|陸運業|https://www.kanachu.co.jp/
@@ -1460,7 +1458,6 @@ const companies=`
 9362|兵機海運|倉庫・運輸関連業|https://www.hyoki.co.jp/
 9363|大運|倉庫・運輸関連業|https://www.daiunex.co.jp/
 9368|キムラユニティー|倉庫・運輸関連業|https://www.kimura-unity.co.jp/
-9375|近鉄エクスプレス|倉庫・運輸関連業|https://www.kwe.com/jp/
 9381|エーアイテイー|倉庫・運輸関連業|https://www.ait-jp.com/
 9384|内外トランスライン|倉庫・運輸関連業|https://www.ntl-naigai.co.jp/
 9386|日本コンセプト|倉庫・運輸関連業|https://www.n-concept.co.jp/
@@ -1499,4 +1496,7 @@ const companies=`
 9936|王将フードサービス|小売業|https://www.ohsho.co.jp/
 9960|東テク|卸売業|https://www.totech.co.jp/
 9987|スズケン|卸売業|https://www.suzuken.co.jp/
+9991|ジェコス|卸売業|https://www.gecoss.co.jp/
+9994|やまや|小売業|https://www.yamaya.jp/
+1301|極洋|水産・農林業|https://www.kyokuyo.co.jp/
 `.trim().split('\n').map(row=>{const [code,name,sector,url]=row.split('|');return {code,name,sector,url}});
