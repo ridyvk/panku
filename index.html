@@ -12,35 +12,8 @@
 </head>
 <body>
   <main class="app">
-    <section class="stage" id="stage" aria-labelledby="app-title">
-      <header class="top">
-        <div>
-          <p class="eyebrow latin">JP LISTED RANDOMIZER</p>
-          <h1 class="latin" id="app-title">CORP DIVE</h1>
-        </div>
-        <div class="progress latin" aria-label="発見した企業数">
-          <span id="count">0 / 100</span>
-          <span>DISCOVERED</span>
-        </div>
-      </header>
-
-      <section class="console" aria-live="polite">
-        <p class="status latin" id="status">READY</p>
-
-        <div class="selection" id="target">
-          <span class="selection-label">選択された企業</span>
-          <strong id="target-name">未選択</strong>
-          <span id="target-sector">プレビューすると企業情報が表示されます</span>
-        </div>
-
-        <button class="go latin" id="go" type="button" aria-label="ランダムに企業の公式サイトへ移動">GO</button>
-        <button class="preview" id="preview" type="button">企業をプレビュー</button>
-      </section>
-
-      <footer class="bottom">
-        <span>前回の企業</span>
-        <strong class="last" id="last">なし</strong>
-      </footer>
+    <section class="stage" id="stage">
+      <button class="go" id="go" type="button" aria-label="ランダムに企業の公式サイトへ移動">GO</button>
     </section>
   </main>
   <script src="companies.js"></script>
