@@ -1,4 +1,5 @@
 const companies=`
+
 7203|トヨタ自動車|輸送用機器|https://global.toyota/jp/
 7267|本田技研工業|輸送用機器|https://global.honda/jp/
 7201|日産自動車|輸送用機器|https://www.nissan-global.com/JP/
@@ -499,4 +500,5 @@ const companies=`
 9719|SCSK|情報・通信業|https://www.scsk.jp/
 2327|日鉄ソリューションズ|情報・通信業|https://www.nssol.nipponsteel.com/
 3774|インターネットイニシアティブ|情報・通信業|https://www.iij.ad.jp/
-`.trim().split('\\n').map(row=>{const [code,name,sector,url]=row.split('|');return {code,name,sector,url}});
+
+`.trim().split('\n').map(row=>{const [code,name,sector,url]=row.split('|');return {code,name,sector,url}});
