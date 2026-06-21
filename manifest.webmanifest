@@ -1,7 +1,7 @@
 {
-  "name": "CORP DIVE",
-  "short_name": "CORP DIVE",
-  "description": "上場企業100社からランダムに1社の公式サイトへ移動するPWA",
+  "name": "GO",
+  "short_name": "GO",
+  "description": "上場企業3720社からランダムに1社の公式サイトへ移動するPWA",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
