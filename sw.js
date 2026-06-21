@@ -1,4 +1,4 @@
-const CACHE = "go-clean-v25";
+const CACHE = "go-clean-v26";
 const ASSETS = [
   "./",
   "./index.html",
