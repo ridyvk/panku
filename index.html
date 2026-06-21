@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#f6f7f9">
+  <meta name="theme-color" content="#f7f7f5">
   <meta name="description" content="上場企業100社からランダムに1社の公式サイトへ移動するアプリ">
   <title>CORP DIVE</title>
   <link rel="manifest" href="manifest.webmanifest">
@@ -15,24 +15,26 @@
     <section class="stage" id="stage" aria-labelledby="app-title">
       <header class="top">
         <div>
-          <p class="eyebrow">JP LISTED RANDOMIZER</p>
-          <h1 id="app-title">CORP DIVE</h1>
+          <p class="eyebrow latin">JP LISTED RANDOMIZER</p>
+          <h1 class="latin" id="app-title">CORP DIVE</h1>
         </div>
-        <div class="progress" aria-label="訪問した企業数">
+        <div class="progress latin" aria-label="発見した企業数">
           <span id="count">0 / 100</span>
-          <span>visited</span>
+          <span>DISCOVERED</span>
         </div>
       </header>
 
       <section class="console" aria-live="polite">
-        <p class="status" id="status">READY</p>
+        <p class="status latin" id="status">READY</p>
+
         <div class="selection" id="target">
           <span class="selection-label">選択された企業</span>
           <strong id="target-name">未選択</strong>
           <span id="target-sector">プレビューすると企業情報が表示されます</span>
         </div>
-        <button class="go" id="go" type="button">ランダムに移動</button>
-        <button class="preview" id="preview" type="button">まず企業を見る</button>
+
+        <button class="go latin" id="go" type="button" aria-label="ランダムに企業の公式サイトへ移動">GO</button>
+        <button class="preview" id="preview" type="button">企業をプレビュー</button>
       </section>
 
       <footer class="bottom">
