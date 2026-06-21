@@ -620,7 +620,6 @@ const companies=`
 2982|ADワークスグループ|不動産業|https://www.adwg.co.jp/
 2986|LAホールディングス|不動産業|https://www.lahd.co.jp/
 3232|三重交通グループホールディングス|不動産業|https://holdings.sanco.co.jp/
-3244|サムティ|不動産業|https://www.samty.co.jp/
 3252|地主|不動産業|https://www.jinushi-jp.com/
 3276|JPMC|不動産業|https://www.jpmc.jp/
 3284|フージャースホールディングス|不動産業|https://www.hoosiers.co.jp/
@@ -727,7 +726,6 @@ const companies=`
 8160|木曽路|小売業|https://www.kisoji.co.jp/
 8163|SRSホールディングス|小売業|https://srs-holdings.co.jp/
 8167|リテールパートナーズ|小売業|https://www.retailpartners.co.jp/
-8182|いなげや|小売業|https://www.inageya.co.jp/
 8194|ライフコーポレーション|小売業|https://www.lifecorp.jp/company/
 8200|リンガーハット|小売業|https://www.ringerhut.co.jp/
 8214|AOKIホールディングス|小売業|https://www.aoki-hd.co.jp/
@@ -800,8 +798,6 @@ const companies=`
 4889|レナサイエンス|医薬品|https://www.renascience.co.jp/
 4894|クオリプス|医薬品|https://cuorips.co.jp/
 2395|新日本科学|サービス業|https://www.snbl.com/
-2372|アイロムグループ|サービス業|https://www.iromgroup.co.jp/
-2309|シミックホールディングス|サービス業|https://www.cmicgroup.com/
 2301|学情|サービス業|https://company.gakujo.ne.jp/
 2305|スタジオアリス|サービス業|https://www.studio-alice.co.jp/company/
 2317|システナ|情報・通信業|https://www.systena.co.jp/
@@ -821,13 +817,11 @@ const companies=`
 4318|クイック|サービス業|https://919.jp/
 4343|イオンファンタジー|サービス業|https://www.fantasy.co.jp/
 4345|シーティーエス|サービス業|https://www.cts-h.co.jp/
-4348|インフォコム|情報・通信業|https://www.infocom.co.jp/
 4350|メディカルシステムネットワーク|小売業|https://www.msnw.co.jp/
 4658|日本空調サービス|サービス業|https://www.nikku.co.jp/
 4659|エイジス|サービス業|https://www.ajis-group.co.jp/
 4665|ダスキン|サービス業|https://www.duskin.co.jp/
 4694|ビー・エム・エル|サービス業|https://www.bml.co.jp/
-4708|りらいあコミュニケーションズ|サービス業|https://www.relia-group.com/
 4714|リソー教育|サービス業|https://www.riso-kyoikugroup.com/
 4718|早稲田アカデミー|サービス業|https://www.waseda-ac.co.jp/corp/
 4719|アルファシステムズ|情報・通信業|https://www.alpha.co.jp/
@@ -864,7 +858,6 @@ const companies=`
 6551|ツナググループ・ホールディングス|サービス業|https://tghd.co.jp/
 6560|エル・ティー・エス|サービス業|https://lt-s.jp/
 6564|ミダックホールディングス|サービス業|https://www.midac.jp/
-6569|日総工産|サービス業|https://www.nisso.co.jp/
 6572|オープングループ|サービス業|https://open-group.co.jp/
 7033|マネジメントソリューションズ|サービス業|https://www.msols.com/
 7038|フロンティア・マネジメント|サービス業|https://www.frontier-mgmt.com/
@@ -926,7 +919,6 @@ const companies=`
 3687|フィックスターズ|情報・通信業|https://www.fixstars.com/ja/
 3694|オプティム|情報・通信業|https://www.optim.co.jp/
 3696|セレス|情報・通信業|https://ceres-inc.jp/
-3738|ティーガイア|情報・通信業|https://www.t-gaia.co.jp/
 3741|セック|情報・通信業|https://www.sec.co.jp/
 3762|テクマトリックス|情報・通信業|https://www.techmatrix.co.jp/
 3763|プロシップ|情報・通信業|https://www.proship.co.jp/
@@ -950,7 +942,6 @@ const companies=`
 3962|チェンジホールディングス|情報・通信業|https://www.change-jp.com/
 3963|シンクロ・フード|情報・通信業|https://www.synchro-food.co.jp/
 3964|オークネット|情報・通信業|https://www.aucnet.co.jp/
-3978|マクロミル|情報・通信業|https://www.macromill.com/
 3983|オロ|情報・通信業|https://www.oro.com/ja/
 3984|ユーザーローカル|情報・通信業|https://www.userlocal.jp/
 3985|テモナ|情報・通信業|https://temona.co.jp/
@@ -959,7 +950,6 @@ const companies=`
 4396|システムサポートホールディングス|情報・通信業|https://www.sts-hd.co.jp/
 4397|チームスピリット|情報・通信業|https://corp.teamspirit.com/
 4410|ハリマ化成グループ|化学|https://www.harima.co.jp/
-4423|アルテリア・ネットワークス|情報・通信業|https://www.arteria-net.com/
 4431|スマレジ|情報・通信業|https://corp.smaregi.jp/
 4436|ミンカブ・ジ・インフォノイド|情報・通信業|https://minkabu.co.jp/
 4443|Sansan|情報・通信業|https://jp.corp-sansan.com/
@@ -999,4 +989,14 @@ const companies=`
 6630|ヤーマン|電気機器|https://www.ya-man.co.jp/
 6632|JVCケンウッド|電気機器|https://www.jvckenwood.com/jp.html
 6638|ミマキエンジニアリング|電気機器|https://ir.mimaki.com/
+6651|日東工業|電気機器|https://www.nito.co.jp/
+6652|IDEC|電気機器|https://jp.idec.com/
+6670|MCJ|電気機器|https://www.mcj.jp/
+6703|沖電気工業|電気機器|https://www.oki.com/jp/
+6718|アイホン|電気機器|https://www.aiphone.co.jp/
+6727|ワコム|電気機器|https://www.wacom.com/ja-jp/
+6741|日本信号|電気機器|https://www.signal.co.jp/
+6744|能美防災|電気機器|https://www.nohmi.co.jp/
+6745|ホーチキ|電気機器|https://www.hochiki.co.jp/
+6750|エレコム|電気機器|https://www.elecom.co.jp/
 `.trim().split('\n').map(row=>{const [code,name,sector,url]=row.split('|');return {code,name,sector,url}});
