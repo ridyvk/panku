@@ -1,4 +1,4 @@
-const CACHE = "corp-dive-clean-v18";
+const CACHE = "corp-dive-clean-v19";
 const ASSETS = [
   "./",
   "./index.html",
