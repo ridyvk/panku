@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="CORP DIVE">
-  <rect width="512" height="512" rx="96" fill="#2457d6"/>
-  <path d="M256 118c-77 0-138 61-138 138s61 138 138 138c43 0 82-19 107-50l-53-42c-13 16-32 25-54 25-40 0-71-31-71-71s31-71 71-71c22 0 41 9 54 25l53-42c-25-31-64-50-107-50z" fill="#ffffff"/>
-  <circle cx="368" cy="256" r="34" fill="#ffffff"/>
+  <rect width="512" height="512" rx="96" fill="#111111"/>
+  <circle cx="256" cy="256" r="138" fill="none" stroke="#ffffff" stroke-width="18"/>
+  <path d="M208 181h63c59 0 96 28 96 75s-37 75-96 75h-63V181zm61 105c27 0 42-10 42-30s-15-30-42-30h-7v60h7z" fill="#ffffff"/>
 </svg>
