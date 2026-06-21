@@ -114,7 +114,6 @@ const companies=`
 7231|トピー工業|輸送用機器|https://www.topy.co.jp/
 5949|ユニプレス|輸送用機器|https://www.unipres.co.jp/
 7105|三菱ロジスネクスト|輸送用機器|https://www.logisnext.com/
-7408|ジャムコ|輸送用機器|https://www.jamco.co.jp/
 7278|エクセディ|輸送用機器|https://www.exedy.com/ja/
 7283|愛三工業|輸送用機器|https://www.aisan-ind.co.jp/
 7246|プレス工業|輸送用機器|https://www.presskogyo.co.jp/
@@ -158,14 +157,12 @@ const companies=`
 7744|ノーリツ鋼機|精密機器|https://www.noritsu.co.jp/
 6871|日本マイクロニクス|電気機器|https://www.mjc.co.jp/
 6728|アルバック|電気機器|https://www.ulvac.co.jp/
-6967|新光電気工業|電気機器|https://www.shinko.co.jp/
 6966|三井ハイテック|電気機器|https://www.mitsui-high-tec.com/ja/
 6890|フェローテックホールディングス|電気機器|https://www.ferrotec.co.jp/
 6525|KOKUSAI ELECTRIC|電気機器|https://www.kokusai-electric.com/
 6526|ソシオネクスト|電気機器|https://www.socionext.com/jp/
 3132|マクニカホールディングス|卸売業|https://holdings.macnica.co.jp/
 8154|加賀電子|卸売業|https://www.taxan.co.jp/
-8068|菱洋エレクトロ|卸売業|https://www.ryoyo.co.jp/
 2760|東京エレクトロン デバイス|卸売業|https://www.teldevice.co.jp/
 7537|丸文|卸売業|https://www.marubun.co.jp/
 6302|住友重機械工業|機械|https://www.shi.co.jp/
@@ -231,7 +228,6 @@ const companies=`
 3436|SUMCO|金属製品|https://www.sumcosi.com/
 3433|トーカロ|金属製品|https://www.tocalo.co.jp/
 3443|川田テクノロジーズ|金属製品|https://www.kawada.jp/
-5486|日立金属|鉄鋼|https://www.proterial.com/
 5444|大和工業|鉄鋼|https://www.yamatokogyo.co.jp/
 5471|大同特殊鋼|鉄鋼|https://www.daido.co.jp/
 5480|日本冶金工業|鉄鋼|https://www.nyk.co.jp/
@@ -282,7 +278,6 @@ const companies=`
 5334|日本特殊陶業|ガラス・土石製品|https://www.niterragroup.com/jp/
 5393|ニチアス|ガラス・土石製品|https://www.nichias.co.jp/
 3405|クラレ|化学|https://www.kuraray.co.jp/
-3404|三菱レイヨン|化学|https://www.m-chemical.co.jp/
 3101|東洋紡|繊維製品|https://www.toyobo.co.jp/
 3103|ユニチカ|繊維製品|https://www.unitika.co.jp/
 3105|日清紡ホールディングス|電気機器|https://www.nisshinbo.co.jp/
@@ -331,7 +326,6 @@ const companies=`
 2602|日清オイリオグループ|食料品|https://www.nisshin-oillio.com/
 2607|不二製油グループ本社|食料品|https://www.fujioilholdings.com/
 2613|J-オイルミルズ|食料品|https://www.j-oil.com/
-2651|ローソン|小売業|https://www.lawson.co.jp/company/
 2810|ハウス食品グループ本社|食料品|https://housefoods-group.com/
 2811|カゴメ|食料品|https://www.kagome.co.jp/company/
 2871|ニチレイ|食料品|https://www.nichirei.co.jp/
@@ -460,7 +454,6 @@ const companies=`
 8725|MS&ADインシュアランスグループホールディングス|保険業|https://www.ms-ad-hd.com/
 8795|T&Dホールディングス|保険業|https://www.td-holdings.co.jp/
 7181|かんぽ生命保険|保険業|https://www.jp-life.japanpost.jp/
-7342|ウェルスナビ|証券・商品先物取引業|https://corp.wealthnavi.com/
 9024|西武ホールディングス|陸運業|https://www.seibuholdings.co.jp/
 9001|東武鉄道|陸運業|https://www.tobu.co.jp/
 9005|東急|陸運業|https://www.tokyu.co.jp/
@@ -499,4 +492,11 @@ const companies=`
 9536|西部ガスホールディングス|電気・ガス業|https://hd.saibugas.co.jp/
 9435|光通信|情報・通信業|https://www.hikari.co.jp/
 9449|GMOインターネットグループ|情報・通信業|https://www.gmo.jp/
+3626|TIS|情報・通信業|https://www.tis.co.jp/
+4307|野村総合研究所|情報・通信業|https://www.nri.com/jp/
+4684|オービック|情報・通信業|https://www.obic.co.jp/
+4768|大塚商会|情報・通信業|https://www.otsuka-shokai.co.jp/corporate/
+9719|SCSK|情報・通信業|https://www.scsk.jp/
+2327|日鉄ソリューションズ|情報・通信業|https://www.nssol.nipponsteel.com/
+3774|インターネットイニシアティブ|情報・通信業|https://www.iij.ad.jp/
 `.trim().split('\\n').map(row=>{const [code,name,sector,url]=row.split('|');return {code,name,sector,url}});
