@@ -1590,7 +1590,6 @@ const companies=`
 2385|総医研ホールディングス|サービス業|https://www.soiken.com/
 2388|ウェッジホールディングス|その他金融業|https://www.wedge-hd.com/
 2393|日本ケアサプライ|サービス業|https://www.caresupply.co.jp/
-2397|DNAチップ研究所|サービス業|https://www.dna-chip.co.jp/
 2404|鉄人化ホールディングス|サービス業|https://www.tetsujinka.com/
 2408|KG情報|サービス業|https://www.kg-net.co.jp/
 2410|キャリアデザインセンター|サービス業|https://www.cdc.co.jp/
@@ -1617,7 +1616,6 @@ const companies=`
 2586|フルッタフルッタ|食料品|https://www.frutafruta.com/
 2594|キーコーヒー|食料品|https://www.keycoffee.co.jp/
 2597|ユニカフェ|食料品|https://www.unicafe.com/
-260A|オルツ|情報・通信業|https://alt.ai/
 2652|まんだらけ|小売業|https://www.mandarake.co.jp/
 2653|イオン九州|小売業|https://www.aeon-kyushu.info/
 2654|アスモ|小売業|https://www.asmo1.co.jp/
@@ -1640,7 +1638,6 @@ const companies=`
 2790|ナフコ|小売業|https://www.nafco.tv/
 2806|ユタカフーズ|食料品|https://www.yutakafoods.co.jp/
 2809|キユーピー|食料品|https://www.kewpie.com/
-2812|焼津水産化学工業|食料品|https://www.yskf.jp/
 2813|和弘食品|食料品|https://www.wakoushokuhin.co.jp/
 2814|佐藤食品工業|食料品|https://www.sato-foods.co.jp/
 2816|ダイショー|食料品|https://www.daisho.co.jp/
@@ -1780,9 +1777,7 @@ const companies=`
 3447|信和|金属製品|https://www.shinwa-jp.com/
 3449|テクノフレックス|金属製品|https://www.technoflex.co.jp/
 3454|ファーストブラザーズ|不動産業|https://www.firstbrothers.com/
-3458|シーアールイー|不動産業|https://www.cre-jpn.com/
 3461|パルマ|不動産業|https://www.palma.jp/
-3464|プロパティエージェント|不動産業|https://www.propertyagent.co.jp/
 3467|アグレ都市デザイン|不動産業|https://www.agr-urban.co.jp/
 3474|G-FACTORY|不動産業|https://g-fac.jp/
 3484|テンポイノベーション|不動産業|https://www.tenpo-r.co.jp/
@@ -1878,7 +1873,6 @@ const companies=`
 3823|THE WHY HOW DO COMPANY|情報・通信業|https://twhdc.co.jp/
 3825|リミックスポイント|情報・通信業|https://www.remixpoint.co.jp/
 3826|システムインテグレータ|情報・通信業|https://corporate.sint.co.jp/
-3830|ギガプライズ|情報・通信業|https://www.gigaprize.co.jp/
 3835|eBASE|情報・通信業|https://www.ebase.co.jp/
 3837|アドソル日進|情報・通信業|https://www.adniss.jp/
 3839|ODKソリューションズ|情報・通信業|https://www.odk.co.jp/
@@ -1891,7 +1885,6 @@ const companies=`
 3848|データ・アプリケーション|情報・通信業|https://www.dal.co.jp/
 3850|NTTデータイントラマート|情報・通信業|https://www.intra-mart.jp/
 3851|日本一ソフトウェア|情報・通信業|https://nippon1.co.jp/
-3852|サイバーコム|情報・通信業|https://www.cy-com.co.jp/
 3854|アイル|情報・通信業|https://www.ill.co.jp/
 3856|Abalance|電気機器|https://www.abalance.jp/
 3857|ラック|情報・通信業|https://www.lac.co.jp/
@@ -1934,10 +1927,8 @@ const companies=`
 3979|うるる|情報・通信業|https://www.uluru.biz/
 3981|ビーグリー|情報・通信業|https://www.beaglee.com/
 3986|ビーブレイクシステムズ|情報・通信業|https://www.bbreak.co.jp/
-3990|UUUM|情報・通信業|https://www.uuum.co.jp/
 3991|ウォンテッドリー|情報・通信業|https://www.wantedly.com/companies/wantedly
 3992|ニーズウェル|情報・通信業|https://www.needswell.com/
-3995|SKIYAKI|情報・通信業|https://skiyaki.com/
 3996|サインポスト|情報・通信業|https://signpost.co.jp/
 3997|トレードワークス|情報・通信業|https://www.tworks.co.jp/
 3998|すららネット|情報・通信業|https://surala.co.jp/
@@ -1999,4 +1990,13 @@ const companies=`
 4245|ダイキアクシス|化学|https://www.daiki-axis.com/
 4247|ポバール興業|化学|https://www.poval.co.jp/
 4255|THECOO|情報・通信業|https://thecoo.co.jp/
+4258|網屋|情報・通信業|https://www.amiya.co.jp/
+4261|アジアクエスト|情報・通信業|https://www.asia-quest.jp/
+4262|ニフティライフスタイル|情報・通信業|https://niftylifestyle.co.jp/
+4263|サスメド|情報・通信業|https://www.susmed.co.jp/
+4264|セキュア|情報・通信業|https://secureinc.co.jp/
+4265|Institution for a Global Society|情報・通信業|https://www.i-globalsociety.com/
+4267|ライトワークス|情報・通信業|https://www.lightworks.co.jp/
+4270|BeeX|情報・通信業|https://www.beex-inc.com/
+4284|ソルクシーズ|情報・通信業|https://www.solxyz.co.jp/
 `.trim().split('\n').map(row=>{const [code,name,sector,url]=row.split('|');return {code,name,sector,url}});
