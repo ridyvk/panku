@@ -1,63 +1,47 @@
 <!doctype html>
-<html lang='ja'>
+<html lang="ja">
 <head>
-<meta charset='utf-8'>
-<meta name='viewport' content='width=device-width,initial-scale=1,viewport-fit=cover'>
-<meta name='theme-color' content='#030503'>
-<meta name='description' content='上場企業100社からランダムに1社の公式ホームページへ飛ぶアプリ'>
-<title>CORP DIVE</title>
-<link rel='manifest' href='manifest.webmanifest'>
-<link rel='icon' href='assets/icons/icon.svg' type='image/svg+xml'>
-<link rel='stylesheet' href='style.css'>
-<style>
-.bg-art{inset:auto!important;left:-74px!important;top:84px!important;width:365px!important;height:146px!important;border:1px solid rgba(122,78,180,.18);border-radius:8px;opacity:.58!important;background-size:cover!important;background-position:center center!important;filter:contrast(1.12) saturate(1.08) drop-shadow(0 0 22px rgba(90,35,155,.24))!important;transform:rotate(-4deg) scale(1)!important;mix-blend-mode:screen}
-.bg-art:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.18),rgba(0,0,0,.04),rgba(0,0,0,.35));pointer-events:none}
-.bg-clutter{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
-.bg-piece{position:absolute;display:block;object-fit:contain;filter:drop-shadow(0 0 16px rgba(0,0,0,.34));transform-origin:center;opacity:.52;mix-blend-mode:normal;user-select:none}
-.bg-hand-1{left:-32px;bottom:88px;width:132px;height:182px;opacity:.62;transform:rotate(-12deg)}
-.bg-mouth-1{right:-22px;top:140px;width:122px;height:178px;opacity:.50;transform:rotate(8deg)}
-.bg-green-1{right:20px;bottom:92px;width:112px;height:112px;opacity:.38;transform:rotate(7deg)}
-.bg-hand-2{left:58px;top:246px;width:72px;height:100px;opacity:.34;transform:rotate(18deg)}
-.bg-mouth-2{left:226px;top:94px;width:58px;height:86px;opacity:.25;transform:rotate(-8deg)}
-.stage.is-diving .bg-art{filter:contrast(1.28) brightness(1.18) saturate(1.18) drop-shadow(0 0 26px rgba(115,255,114,.2))!important;transform:rotate(-4deg) scale(.92)!important;opacity:.18!important;transition:.35s}
-.stage.is-diving .bg-piece{opacity:.1!important;transform:scale(.9)!important;transition:.35s}
-@media(max-height:680px){.bg-art{top:70px!important;width:315px!important;height:126px!important}.bg-hand-1{width:112px;height:154px;bottom:78px}.bg-mouth-1{width:104px;height:152px;top:126px}.bg-green-1{width:94px;height:94px;bottom:78px}.bg-hand-2{width:62px;height:86px;top:222px}.bg-mouth-2{width:50px;height:74px;top:82px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f6f7f9">
+  <meta name="description" content="上場企業100社からランダムに1社の公式サイトへ移動するアプリ">
+  <title>CORP DIVE</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main class='app'>
-  <div class='noise' aria-hidden='true'></div>
-  <div class='scan' aria-hidden='true'></div>
-  <section class='stage' id='stage'>
-    <div class='bg-art' aria-hidden='true'></div>
-    <div class='bg-clutter' aria-hidden='true'>
-      <img class='bg-piece bg-hand-1' src='assets/bg/hand-pink.webp' alt=''>
-      <img class='bg-piece bg-mouth-1' src='assets/bg/mouth-pink.webp' alt=''>
-      <img class='bg-piece bg-green-1' src='assets/bg/green-sheet.webp' alt=''>
-      <img class='bg-piece bg-hand-2' src='assets/bg/hand-pink.webp' alt=''>
-      <img class='bg-piece bg-mouth-2' src='assets/bg/mouth-pink.webp' alt=''>
-    </div>
-    <div class='top'>
-      <div><p class='eyebrow'>JP LISTED RANDOMIZER</p><h1>CORP DIVE</h1></div>
-      <div class='count' id='count'>0 / 100</div>
-    </div>
-    <div class='orbit' id='orbit' aria-hidden='true'></div>
-    <section class='console'>
-      <div>
-        <p class='status' id='status'>PRESS TO ENTER</p>
-        <button class='go' id='go' type='button' aria-label='ランダムで企業の公式サイトを開く'>GO</button>
-        <p class='target' id='target'>未選択</p>
-        <p class='hint'>上場企業100社からランダム選定 → 公式HPへ移動</p>
-      </div>
+  <main class="app">
+    <section class="stage" id="stage" aria-labelledby="app-title">
+      <header class="top">
+        <div>
+          <p class="eyebrow">JP LISTED RANDOMIZER</p>
+          <h1 id="app-title">CORP DIVE</h1>
+        </div>
+        <div class="progress" aria-label="訪問した企業数">
+          <span id="count">0 / 100</span>
+          <span>visited</span>
+        </div>
+      </header>
+
+      <section class="console" aria-live="polite">
+        <p class="status" id="status">READY</p>
+        <div class="selection" id="target">
+          <span class="selection-label">選択された企業</span>
+          <strong id="target-name">未選択</strong>
+          <span id="target-sector">プレビューすると企業情報が表示されます</span>
+        </div>
+        <button class="go" id="go" type="button">ランダムに移動</button>
+        <button class="preview" id="preview" type="button">まず企業を見る</button>
+      </section>
+
+      <footer class="bottom">
+        <span>前回の企業</span>
+        <strong class="last" id="last">なし</strong>
+      </footer>
     </section>
-    <section class='bottom'>
-      <div><div>LAST TARGET</div><div class='last' id='last'>NONE</div></div>
-      <button class='preview' id='preview' type='button'>PREVIEW</button>
-    </section>
-  </section>
-</main>
-<script src='companies.js'></script>
-<script src='app.js'></script>
-<script src='effects.js'></script>
+  </main>
+  <script src="companies.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
